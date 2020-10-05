@@ -7,16 +7,13 @@
 Libraries used: => Pyrogram => Telegraph
 
 
-An example `main.py` file could be:
+An example `ev.py` file could be:
 
 ```python3
-bot = Client(
-    "QR CODE BOT",
-    bot_token = '1234567890:AAEetTcs5EqM7JH-9hlfNXpVGFQaa-hc7_U',
-    api_id = 1234567 , 
-    api_hash = 'gfdfddgsdgjhdd6584544',
-    plugins = plugins
-)
+class ev_data():
+    BOT_TOKEN = '1991308069:tU1gaAyvgAAGgo3F2AI2J7nxcqvkwoTCrpY' #add your API_HASH from https://my.telegram.org/apps
+    API_ID = 1234567 #Add your API_ID from https://my.telegram.org/apps
+    API_HASH = 'bc4811980930ad49d7f8e2b024f7cf13' #Add your Bot token from @Botfather
 ```
 Go and get the bot token [@BotFather](https://telegram.dog/BotFather)
 
