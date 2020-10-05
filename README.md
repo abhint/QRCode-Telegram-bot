@@ -1,5 +1,12 @@
 # QRCode-Telegram-bot
 
+## installation
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Abhijith-cloud/QRCode-Telegram-bot/)
+
+Libraries used: => Pyrogram => Telegraph
+
+
 An example `main.py` file could be:
 
 ```python3
