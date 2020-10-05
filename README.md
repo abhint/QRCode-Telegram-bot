@@ -24,6 +24,8 @@ Go and get the bot token [@BotFather](https://telegram.dog/BotFather)
 
 click the link to get your app id & api_hash [my.telegram.org](https://my.telegram.org/auth)
 
+### Run your Bot
+
 ```sh
 $ python3 main.py
 ```
