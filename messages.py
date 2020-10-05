@@ -6,6 +6,6 @@
 
 import os
 
-class msg:
+class msg():
     start = "\nThis is a QR code generator bot by @thankappan369</b>"
     error = "something is went wrong\n{error} \ncontact admin @thankappan369"
