@@ -1,0 +1,25 @@
+{
+    "name": "QRCode Telegram-bot",
+    "description": "This is a simple boat. You generate QRcode with this bot",
+    "repository": "https://github.com/Abhijith-cloud/QRCode-Telegram-bot",
+    "keywords": ["telegram", "pyrogram", "qrcode-generator","telegram bot"],
+    "env": {
+       "BOT_TOKEN": {
+        "description": "Your Bot token from @Botfather",
+        "value": ""
+      },
+      "API_ID": {
+        "description": "Your API_ID from https://my.telegram.org/apps ",
+        "value": ""
+      },
+      "API_HASH": {
+        "description": "Your API_HASH from https://my.telegram.org/apps",
+        "value": ""
+      }
+     },
+     "buildpacks": [
+      {
+        "url": "heroku/python"
+      }
+    ]
+  }

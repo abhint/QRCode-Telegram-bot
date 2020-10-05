@@ -6,14 +6,13 @@
 
 
 from pyrogram import Client
-plugins = dict(
-        root="plugins"
-    )
+from ev import ev_data
+plugins = dict(root="plugins")
 bot = Client(
     "QR CODE BOT",
-    bot_token = 'Your Bot Token',
-    api_id = Your App ID , 
-    api_hash = 'yor api_hash',
+    bot_token = ev_data.BOT_TOKEN,
+    api_id = ev_data.API_ID , 
+    api_hash = ev_data.API_HASH,
     plugins = plugins
 )
 bot.run()

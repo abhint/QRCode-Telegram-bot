@@ -10,6 +10,7 @@ from pyrogram import Client,Filters
 from telegraph import upload_file
 import pyqrcode 
 import png 
+from messages import msg
 
 
 @Client.on_message(Filters.command(["start"]))
@@ -17,7 +18,7 @@ async def start(client, message):
     await client.send_message(
         
         chat_id=message.chat.id,
-        text=f"<b>Hey {message.from_user.first_name},\nThis is a QR code generator bot by @thankappan369</b>",
+        text=f"<b>Hey {message.from_user.first_name},{msg.start}",
         reply_to_message_id=message.message_id,
         parse_mode = "html" 
     )
@@ -38,9 +39,14 @@ async def qrcode(client, message):
     try:
         response = upload_file(img)
     except Exception as error:
-        await qr.edit_text(f"something is went wrong\n{error} \ncontact admin @thankappan369")
+        await qr.edit_text(f"{msg.error}")
         return
-    
+    try:
+        await message.reply_photo(photo=img)
+
+    except Exception as error:
+        print(error)
+
     await qr.edit_text(f"https://telegra.ph{response[0]}")
 
     try:
