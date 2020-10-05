@@ -12,7 +12,7 @@ $ git clone https://github.com/Abhijith-cloud/QRCode-Telegram-bot.git / gh repo 
 ```sh
 $ pip3 install -r requirements.txt
 ```
-### Edit 
+### Add your bot details
 
 An example `ev.py` file could be:
 
