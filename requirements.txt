@@ -3,3 +3,5 @@ telegraph
 tgcrypto
 pyqrcode 
 pypng
+pyzbar
+Pillow
