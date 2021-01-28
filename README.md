@@ -34,7 +34,7 @@ python3 main.py
 
 ## Credits, and Thanks to
 
-* [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
+* [Dan Tès](https://telegram.dog/haskell) for his[Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
-#### LICENSE
+### LICENSE
 - GPLv3
