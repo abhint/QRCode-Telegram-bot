@@ -4,8 +4,6 @@
 # (c) Abhijith N T ;-)
 # Thank you https://github.com/pyrogram/pyrogram :-)
 
-import os
-
 class msg():
     source = "\nsource:https://github.com/Abhijith-cloud/QRCode-Telegram-bot"
     start = "\n<b>This is a QR code generator bot by @thankappan369</b>"
