@@ -7,10 +7,10 @@
 Libraries used: => Pyrogram => Telegraph
 
 ```sh
-$ git clone https://github.com/Abhijith-cloud/QRCode-Telegram-bot.git / gh repo clone Abhijith-cloud/QRCode-Telegram-bot
+git clone https://github.com/Abhijith-cloud/QRCode-Telegram-bot.git / gh repo clone Abhijith-cloud/QRCode-Telegram-bot
 ```
 ```sh
-$ pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 ### Add your bot details
 
@@ -29,7 +29,7 @@ click the link to get your app id & api_hash [my.telegram.org](https://my.telegr
 ### Run your Bot
 
 ```sh
-$ python3 main.py
+python3 main.py
 ```
 
 ## Credits, and Thanks to
