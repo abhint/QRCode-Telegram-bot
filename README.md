@@ -17,7 +17,7 @@ pip3 install -r requirements.txt
 An example `env.py` file could be:
 
 ```python3
-class env_data():
+class EnvData:
     BOT_TOKEN = '1991308069:tU1gaAyvgAAGgo3F2AI2J7nxcqvkwoTCrpY' #add your API_HASH from https://my.telegram.org/apps
     API_ID = 1234567 #Add your API_ID from https://my.telegram.org/apps
     API_HASH = 'bc4811980930ad49d7f8e2b024f7cf13' #Add your Bot token from @Botfather
