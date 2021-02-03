@@ -6,38 +6,37 @@
 
 
 import os
-from pyrogram import Client,Filters
+from pyrogram import Client, filters
 from telegraph import upload_file
-import pyqrcode 
-from messages import msg
+import pyqrcode
+from messages import Msg
 from bot.plugins.display.display_progress import progress
 
 
-@Client.on_message(Filters.text & Filters.private)
+@Client.on_message(filters.text & filters.private)
 async def qr_encode(client, message):
     qr = await client.send_message(
         chat_id=message.chat.id,
-        text=f"Making your QR Code... 😁",
-        reply_to_message_id=message.message_id  
+        text="Making your QR Code... 😁",
+        reply_to_message_id=message.message_id
     )
     s = str(message.text)
     qrname = str(message.from_user.id)
     qrcode = pyqrcode.create(s)
-    qrcode.png(qrname + '.png', scale = 6) 
+    qrcode.png(qrname + '.png', scale=6)
     img = qrname + '.png'
-    # await qr.edit_text("Uploading... ⏫")
     try:
         response = upload_file(img)
     except Exception as error:
-        await qr.edit_text(f"{msg.error}")
+        await qr.edit_text(f"{Msg.error}")
         return
     try:
         await message.reply_photo(
             photo=img,
             progress=progress,
             progress_args=(
-            "Trying to Uploading....",
-            qr
+                "Trying to Uploading....",
+                qr
             )
         )
 
@@ -49,5 +48,4 @@ async def qr_encode(client, message):
     try:
         os.remove(img)
     except Exception as error:
-        print('Somting is {error}')
-         
+        print('Something is {error}')
