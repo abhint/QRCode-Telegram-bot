@@ -1,6 +1,6 @@
-https://github.com/pyrogram/pyrogram/archive/asyncio-dev.zip
+Pyrogram
+TgCrypto
 telegraph
-tgcrypto
 pyqrcode 
 pypng
 pyzbar

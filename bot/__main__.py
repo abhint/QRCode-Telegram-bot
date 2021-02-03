@@ -6,15 +6,16 @@
 
 
 from pyrogram import Client
-from env import env_data
+from env import EnvData
 
 bot = Client(
     "QR CODE BOT",
-    bot_token = env_data.BOT_TOKEN,
-    api_id = env_data.API_ID,
-    api_hash = env_data.API_HASH,
-    plugins = {
-        "root":"bot/plugins"
-        }
+    bot_token=EnvData.BOT_TOKEN,
+    api_id=EnvData.API_ID,
+    api_hash=EnvData.API_HASH,
+    plugins={
+        "root": "bot/plugins"
+        },
+    parse_mode="html"
 )
 bot.run()
