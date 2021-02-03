@@ -2,6 +2,7 @@
 
 ## installation
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/46b19b1337ea4f68b6aa1a2b1275ab64)](https://app.codacy.com/gh/Abhijith-cloud/QRCode-Telegram-bot?utm_source=github.com&utm_medium=referral&utm_content=Abhijith-cloud/QRCode-Telegram-bot&utm_campaign=Badge_Grade)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Abhijith-cloud/QRCode-Telegram-bot/)
 
 Libraries used: => Pyrogram => Telegraph
