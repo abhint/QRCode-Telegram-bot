@@ -1,5 +1,5 @@
 {
-    "name": "QRCode Telegram-bot",
+    "name": "QR-Code-Bot",
     "description": "This is a simple boat. You generate QRcode with this bot",
     "repository": "https://github.com/FayasNoushad/QR-Code-Bot",
     "keywords": ["telegram", "pyrogram", "qrcode-generator", "qrcode-decoder", "telegram bot"],
