@@ -1,30 +1,26 @@
-# QRCode-Telegram-bot
+# QR-Code-bot 
+
+<p align="center">
+  <a href="https://www.python.org">
+    <img src="http://ForTheBadge.com/images/badges/made-with-python.svg">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://telegram.me/FayasNoushad">
+    <img height="25px" src="https://img.shields.io/badge/Updates_Channel-30302f?style=flat&logo=telegram">
+  </a>
+  <a href="https://telegram.me/FayasChat">
+    <img height="25px" src="https://img.shields.io/badge/Support_Group-30302f?style=flat&logo=telegram">
+  </a>
+  <a href="https://telegram.me/FNPROJECTS">
+    <img height="25px" src="https://img.shields.io/badge/Projects_Channel-30302f?style=flat&logo=telegram">
+  </a>
+</p>
 
 ## installation
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FayasNoushad/QR-Code-Bot)
-
-Libraries used: => Pyrogram 
-
-### Add your bot details
-
-An example `env.py` file could be:
-
-```python3
-class EnvData:
-    BOT_TOKEN = '1991308069:tU1gaAyvgAAGgo3F2AI2J7nxcqvkwoTCrpY' #add your API_HASH from https://my.telegram.org/apps
-    API_ID = 1234567 #Add your API_ID from https://my.telegram.org/apps
-    API_HASH = 'bc4811980930ad49d7f8e2b024f7cf13' #Add your Bot token from @Botfather
-```
-Go and get the bot token [@BotFather](https://telegram.dog/BotFather)
-
-click the link to get your app id & api_hash [my.telegram.org](https://my.telegram.org/auth)
-
-### Run your Bot
-
-```sh
-python3 main.py
-```
 
 ## Credits, and Thanks to
 
