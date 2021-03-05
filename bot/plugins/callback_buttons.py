@@ -1,6 +1,6 @@
 import pyrogram
 from pyrogram import Client
-from plugins.commands import start, help, about
+from bot.plugins.commands import start, help, about
 
 @Client.on_callback_query()
 async def cb_handler(bot, update):
