@@ -1,10 +1,10 @@
 {
     "name": "QRCode Telegram-bot",
     "description": "This is a simple boat. You generate QRcode with this bot",
-    "repository": "https://github.com/Abhijith-cloud/QRCode-Telegram-bot",
-    "keywords": ["telegram", "pyrogram", "qrcode-generator","telegram bot"],
+    "repository": "https://github.com/FayasNoushad/QR-Code-Bot",
+    "keywords": ["telegram", "pyrogram", "qrcode-generator", "qrcode-decoder", "telegram bot"],
     "env": {
-       "BOT_TOKEN": {
+      "BOT_TOKEN": {
         "description": "Your Bot token from @Botfather",
         "value": ""
       },
