@@ -42,7 +42,12 @@ async def qr_decode(client, message):
         qr_text = "".join(qr_text_ext)  # Text_join
     except Exception as error:
         print(error)
-    await decode_text.edit_text(f"{qr_text}")
+    await decode_text.edit_text(
+        text=f"<b>Link :-</b> <code>{qr_text}</code>",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Open Link", url=f"{qr_text}"), InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url={qr_text}"), ],
+                                           [InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FNPROJECTS')]]),
+        disable_web_page_preview=True
+    )
     try:
         os.remove(im_dowload)
     except Exception as error:
