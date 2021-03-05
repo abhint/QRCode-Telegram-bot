@@ -9,7 +9,7 @@ import os
 from pyrogram import Client, filters
 from telegraph import upload_file
 import pyqrcode
-from messages import Msg
+from messages import Message
 from bot.plugins.display.display_progress import progress
 
 
@@ -28,7 +28,7 @@ async def qr_encode(client, message):
     try:
         response = upload_file(img)
     except Exception as error:
-        await qr.edit_text(f"{Msg.error}")
+        await qr.edit_text(f"{Message.error}")
         return
     try:
         await message.reply_photo(
