@@ -6,8 +6,8 @@
 
 
 import os
-from pyrogram import Client, filters
-from telegraph import upload_file
+from pyrogram import Client, filters 
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import pyqrcode
 from messages import Message
 from bot.plugins.display.display_progress import progress
@@ -33,18 +33,13 @@ async def qr_encode(client, message):
     try:
         await message.reply_photo(
             photo=img,
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
             progress=progress,
-            progress_args=(
-                "Trying to Uploading....",
-                qr
-            )
+            progress_args=("Trying to Uploading....", qr)
         )
 
     except Exception as error:
         print(error)
-
-    await qr.edit_text(f"https://telegra.ph{response[0]}")
-
     try:
         os.remove(img)
     except Exception as error:
