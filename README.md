@@ -2,16 +2,10 @@
 
 ## installation
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Abhijith-cloud/QRCode-Telegram-bot/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/FayasNoushad/QR-Code-Bot)
 
-Libraries used: => Pyrogram => Telegraph
+Libraries used: => Pyrogram 
 
-```sh
-git clone https://github.com/Abhijith-cloud/QRCode-Telegram-bot.git / gh repo clone Abhijith-cloud/QRCode-Telegram-bot
-```
-```sh
-pip3 install -r requirements.txt
-```
 ### Add your bot details
 
 An example `env.py` file could be:
