@@ -4,7 +4,8 @@
 # (c) Abhijith N T ;-)
 # Thank you https://github.com/pyrogram/pyrogram :-)
 
-from pyrogram import Client, filters
+from pyrogram import Client, filters 
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from PIL import Image
 import os
 from pyzbar.pyzbar import decode
