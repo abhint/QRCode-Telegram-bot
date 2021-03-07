@@ -46,7 +46,7 @@ async def qr_decode(client, message):
     await decode_text.edit_text(
         text=f"<b>Link :-</b> <code>{qr_text}</code>",
         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Open Link", url=f"{qr_text}"), InlineKeyboardButton(text="Share Link", url=f"https://telegram.me/share/url?url={qr_text}"), ],
-                                           [InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FNPROJECTS')]]),
+                                           [InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
         disable_web_page_preview=True
     )
     try:
