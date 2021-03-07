@@ -1,6 +1,5 @@
-Pyrogram
+pyrogram
 TgCrypto
-telegraph
 pyqrcode 
 pypng
 pyzbar
