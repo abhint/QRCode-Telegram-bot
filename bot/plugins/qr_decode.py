@@ -5,7 +5,8 @@
 # Thank you https://github.com/pyrogram/pyrogram :-)
 
 from pyrogram import Client, filters 
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
+from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 from PIL import Image
 import os
 from pyzbar.pyzbar import decode
