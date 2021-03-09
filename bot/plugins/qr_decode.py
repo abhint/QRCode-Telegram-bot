@@ -28,7 +28,7 @@ async def qr_decode(bot, update):
         except Exception:
             await bot.send_message(chat_id=update.chat.id, text=Message.SOMETHING_WRONG)
             return
-    decode_text = await client.send_message(
+    decode_text = await update.send_message(
         chat_id=update.chat.id,
         text="<b>Processing your request...</b>",
         reply_to_message_id=message.message_id,
