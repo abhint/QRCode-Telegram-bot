@@ -11,10 +11,24 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import pyqrcode
 from messages import Message
 from bot.plugins.display.display_progress import progress
-
+from env import EnvData
+from messages import Message
 
 @Client.on_message(filters.text & filters.private)
 async def qr_encode(bot, update):
+    if EnvData.UPDATE_CHANNEL:
+        try:
+            user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, message.chat.id)
+            if user.status == "kicked":
+              await client.send_message(text=Message.BANNED_USER_TEXT)
+              return
+        except UserNotParticipant:
+            await client.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            await client.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            return
+        except Exception:
+            await client.send_message(chat_id=message.chat.id, text=Message.SOMETHING_WRONG)
+            return
     qr = await bot.send_message(
         chat_id=update.chat.id,
         text="Making your QR Code... 😁",
