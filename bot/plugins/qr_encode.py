@@ -14,25 +14,26 @@ from bot.plugins.display.display_progress import progress
 
 
 @Client.on_message(filters.text & filters.private)
-async def qr_encode(client, message):
-    qr = await client.send_message(
-        chat_id=message.chat.id,
+async def qr_encode(bot, update):
+    qr = await bot.send_message(
+        chat_id=update.chat.id,
         text="Making your QR Code... 😁",
-        reply_to_message_id=message.message_id
+        reply_to_message_id=update.message_id
     )
-    s = str(message.text)
-    qrname = str(message.from_user.id)
+    s = str(update.text)
+    qrname = str(update.from_user.id)
     qrcode = pyqrcode.create(s)
     qrcode.png(qrname + '.png', scale=6)
     img = qrname + '.png'
     try:
         response = upload_file(img)
     except Exception as error:
-        await qr.edit_text(f"{Message.error}")
+        await qr.edit_text(f"{update.error}")
         return
     try:
-        await message.reply_photo(
+        await update.reply_photo(
             photo=img,
+            caption="<b>Made by @FayasNoushad</b>",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
             progress=progress,
             progress_args=("Trying to Uploading....", qr)
