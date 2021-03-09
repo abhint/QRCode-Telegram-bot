@@ -26,7 +26,8 @@ async def qr_encode(bot, update):
         except UserNotParticipant:
             await update.reply_text(text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
             return
-        except Exception:
+        except Exception as error:
+            print(error)
             await update.reply_text(text=Message.SOMETHING_WRONG)
             return
     qr = await bot.send_message(
@@ -41,6 +42,7 @@ async def qr_encode(bot, update):
     img = qrname + '.png'
     try:
         await bot.send_photo(
+            chat_id=update.chat.id,
             photo=img,
             caption="<b>Made by @FayasNoushad</b>",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
@@ -53,4 +55,4 @@ async def qr_encode(bot, update):
     try:
         os.remove(img)
     except Exception as error:
-        print('Something is {error}')
+        print(error)
