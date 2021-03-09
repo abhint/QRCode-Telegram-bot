@@ -11,9 +11,9 @@ Buttons.object():
 @Client.on_callback_query()
 async def cb_handler(bot, update):
     if update.data == "home":
-        await update.message.edit_text(chat_id=update.chat.id, text=Message.START_TEXT.format(update.from_user.mention), parse_mode="html", disable_web_page_preview=True, reply_markup=START_BUTTON, reply_to_message_id=update.message_id)
+        await update.message.edit_text(chat_id=update.chat.id, text=Message.START_TEXT.format(update.from_user.mention), parse_mode="html", disable_web_page_preview=True, reply_markup=Buttons.START_BUTTON, reply_to_message_id=update.message_id)
     if update.data == "help":
-        await update.message.edit_text(chat_id=update.chat.id, text=Message.HELP_USER, parse_mode="html", disable_web_page_preview=True, reply_markup=HELP_BUTTON, reply_to_message_id=update.message_id)
+        await update.message.edit_text(chat_id=update.chat.id, text=Message.HELP_USER, parse_mode="html", disable_web_page_preview=True, reply_markup=Buttons.HELP_BUTTON, reply_to_message_id=update.message_id)
     if update.data == "close":
         await update.message.delete()
 
