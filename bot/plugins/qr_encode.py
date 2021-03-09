@@ -28,7 +28,7 @@ async def qr_encode(bot, update):
     try:
         response = upload_file(img)
     except Exception as error:
-        await qr.edit_text(f"{update.error}")
+        await qr.edit_text(f"{Message.ERROR}")
         return
     try:
         await update.reply_photo(
