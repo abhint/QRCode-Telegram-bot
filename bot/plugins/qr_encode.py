@@ -19,7 +19,7 @@ from messages import Message
 async def qr_encode(bot, update):
     if EnvData.UPDATE_CHANNEL:
         try:
-            user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, message.chat.id)
+            user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, update.chat.id)
             if user.status == "kicked":
               await update.reply_text(chat_id=update.chat.id, text=Message.BANNED_USER_TEXT)
               return
