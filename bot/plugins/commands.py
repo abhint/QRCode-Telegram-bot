@@ -13,9 +13,7 @@ async def cb_handler(bot, update):
     if update.data == "close":
         await update.message.delete()
 
-@Client.on_message(filters.command(["start"]))
-async def start(bot, message):
-    await bot.send_message(
+START=(
         chat_id=update.chat.id,
         text=Message.START_TEXT.format(update.from_user.mention),
         parse_mode="html",
@@ -25,9 +23,7 @@ async def start(bot, message):
         reply_to_message_id=update.message_id
     )
 
-@Client.on_message(filters.command(["help"]))
-async def help(bot, update):
-    await bot.send_message(
+HELP=(
         chat_id=update.chat.id,
         text=Message.HELP_USER,
         parse_mode="html",
@@ -36,3 +32,11 @@ async def help(bot, update):
                                            [InlineKeyboardButton('⚜ Back to Home ⚜', callback_data='home')]]),
         reply_to_message_id=update.message_id
     )
+
+@Client.on_message(filters.command(["start"]))
+async def start(bot, update):
+    await bot.send_message(START)
+
+@Client.on_message(filters.command(["help"]))
+async def help(bot, update):
+    await bot.send_message(HELP)
