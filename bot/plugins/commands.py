@@ -6,8 +6,10 @@ from messages import Message
 async def cb_handler(bot, update):
     if update.data == "home":
         await update.message.delete()
+        await start(bot, update.message)
     if update.data == "help":
         await update.message.delete()
+        await help(bot, update.message)
     if update.data == "close":
         await update.message.delete()
 
