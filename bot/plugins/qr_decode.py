@@ -15,29 +15,29 @@ from env import EnvData
 from messages import Message
 
 @Client.on_message(filters.photo)
-async def qr_decode(client, message):
+async def qr_decode(bot, update):
     if EnvData.UPDATE_CHANNEL:
         try:
-            user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, message.chat.id)
+            user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, update.chat.id)
             if user.status == "kicked":
-              await client.send_message(text=Message.BANNED_USER_TEXT)
+              await bot.send_message(text=Message.BANNED_USER_TEXT)
               return
         except UserNotParticipant:
-            await client.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            await bot.send_message(chat_id=update.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
             return
         except Exception:
-            await client.send_message(chat_id=message.chat.id, text=Message.SOMETHING_WRONG)
+            await bot.send_message(chat_id=update.chat.id, text=Message.SOMETHING_WRONG)
             return
     decode_text = await client.send_message(
-        chat_id=message.chat.id,
+        chat_id=update.chat.id,
         text="<b>Processing your request...</b>",
         reply_to_message_id=message.message_id,
     )
-    dl_location = str(message.from_user.id)
+    dl_location = str(update.from_user.id)
     im_dowload = ''
     qr_text = ''
     try:
-        im_dowload = await message.download(
+        im_dowload = await update.download(
             file_name=dl_location + '.png',
             progress=progress,
             progress_args=(
