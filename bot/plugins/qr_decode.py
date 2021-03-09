@@ -10,10 +10,23 @@ from PIL import Image
 import os
 from pyzbar.pyzbar import decode
 from bot.plugins.display.display_progress import progress
-
+from env import EnvData 
+from messages import Message
 
 @Client.on_message(filters.photo)
 async def qr_decode(client, message):
+    if EnvData.UPDATE_CHANNEL:
+        try:
+            user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, message.chat.id)
+            if user.status == "kicked":
+              await client.send_message(text=Message.BANNED_USER_TEXT)
+              return
+        except UserNotParticipant:
+            await client.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            return
+        except Exception:
+            await client.send_message(chat_id=message.chat.id, text=Message.SOMETHING_WRONG)
+            return
     decode_text = await client.send_message(
         chat_id=message.chat.id,
         text="<b>Processing your request...</b>",
