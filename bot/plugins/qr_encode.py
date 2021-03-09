@@ -47,7 +47,6 @@ async def qr_encode(bot, update):
             progress=progress,
             progress_args=("Trying to Uploading....", qr)
         )
-        await qr.delete()
     except Exception as error:
         await qr.edit_text(f"{Message.ERROR}")
         return
