@@ -21,7 +21,7 @@ async def qr_encode(bot, update):
         try:
             user = await bot.get_chat_member(EnvData.UPDATE_CHANNEL, message.chat.id)
             if user.status == "kicked":
-              await update.reply_text(text=Message.BANNED_USER_TEXT)
+              await update.reply_text(chat_id=update.chat.id, text=Message.BANNED_USER_TEXT)
               return
         except UserNotParticipant:
             await update.reply_text(chat_id=update.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
@@ -40,7 +40,7 @@ async def qr_encode(bot, update):
     qrcode.png(qrname + '.png', scale=6)
     img = qrname + '.png'
     try:
-        await update.reply_photo(
+        await bot.send_message(
             photo=img,
             caption="<b>Made by @FayasNoushad</b>",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
