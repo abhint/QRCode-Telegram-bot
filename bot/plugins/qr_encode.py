@@ -26,17 +26,17 @@ async def qr_encode(bot, update):
     qrcode.png(qrname + '.png', scale=6)
     img = qrname + '.png'
     try:
-        response = upload_file(img)
+        await update.reply_photo(
+            photo=img,
+            caption="<b>Made by @FayasNoushad</b>",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
+            progress=progress,
+            progress_args=("Trying to Uploading....", qr)
+        )
+        await qr.delete()
     except Exception as error:
         await qr.edit_text(f"{Message.ERROR}")
         return
-    await update.reply_photo(
-        photo=img,
-        caption="<b>Made by @FayasNoushad</b>",
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
-        progress=progress,
-        progress_args=("Trying to Uploading....", qr)
-    )
     try:
         os.remove(img)
     except Exception as error:
