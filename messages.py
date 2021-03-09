@@ -8,7 +8,7 @@ class Message:
     START_TEXT = """
 Hello {}, I am a simple Link to QR code generator with QR code decode to link bot.
 
-Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
+Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact @FayasChat for discussion. Use /help for more...
 """
 
     HELP_USER = """
@@ -17,7 +17,7 @@ Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact <a hre
 - Send me a link I will generate the QR code of that link.
 - Send me a QR code image I will decode that image and convert to link.
 
-Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact <a href='https://telegram.me/FayasChat'>support group</a> for discussion.
+Made with love ❤️ in Kerala, India 🇮🇳 by @FayasNoushad. Contact @FayasChat for discussion.
 """
     ERROR = "Something Wrong! Click help button for more... Contact <a href='https://telegram.me/FayasChat'>support group</a>."
     
