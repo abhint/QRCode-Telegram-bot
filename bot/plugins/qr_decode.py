@@ -28,16 +28,16 @@ async def qr_decode(bot, update):
         except Exception:
             await bot.send_message(chat_id=update.chat.id, text=Message.SOMETHING_WRONG)
             return
-    decode_text = await update.send_message(
+    decode_text = await bot.send_message(
         chat_id=update.chat.id,
         text="<b>Processing your request...</b>",
-        reply_to_message_id=message.message_id,
+        reply_to_message_id=update.message_id,
     )
     dl_location = str(update.from_user.id)
     im_dowload = ''
     qr_text = ''
     try:
-        im_dowload = await update.download(
+        im_dowload = await bot.download(
             file_name=dl_location + '.png',
             progress=progress,
             progress_args=(
