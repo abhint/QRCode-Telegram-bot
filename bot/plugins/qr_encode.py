@@ -24,11 +24,11 @@ async def qr_encode(bot, update):
               await client.send_message(text=Message.BANNED_USER_TEXT)
               return
         except UserNotParticipant:
-            await client.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
-            await client.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            await bot.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            await bot.send_message(chat_id=message.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
             return
         except Exception:
-            await client.send_message(chat_id=message.chat.id, text=Message.SOMETHING_WRONG)
+            await bot.send_message(chat_id=message.chat.id, text=Message.SOMETHING_WRONG)
             return
     qr = await bot.send_message(
         chat_id=update.chat.id,
