@@ -23,10 +23,10 @@ async def qr_decode(bot, update):
               await update.reply_text(text=Message.BANNED_USER_TEXT)
               return
         except UserNotParticipant:
-            await update.reply_text(chat_id=update.chat.id, text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
+            await update.reply_text(text=Message.FORCE_SUBSCRIBE_TEXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😎 Join Channel 😎", url=f"https://telegram.me/{EnvData.UPDATE_CHANNEL}")]]))
             return
         except Exception:
-            await update.reply_text(chat_id=update.chat.id, text=Message.SOMETHING_WRONG)
+            await update.reply_text(text=Message.SOMETHING_WRONG)
             return
     decode_text = await bot.send_message(
         chat_id=update.chat.id,
