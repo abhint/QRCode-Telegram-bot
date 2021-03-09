@@ -48,6 +48,7 @@ async def qr_encode(bot, update):
             progress_args=("Trying to Uploading....", qr)
         )
     except Exception as error:
+        print(error)
         await qr.edit_text(f"{Message.ERROR}")
     try:
         os.remove(img)
