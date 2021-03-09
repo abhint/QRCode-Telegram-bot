@@ -30,17 +30,13 @@ async def qr_encode(bot, update):
     except Exception as error:
         await qr.edit_text(f"{Message.ERROR}")
         return
-    try:
-        await update.reply_photo(
-            photo=img,
-            caption="<b>Made by @FayasNoushad</b>",
-            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
-            progress=progress,
-            progress_args=("Trying to Uploading....", qr)
-        )
-
-    except Exception as error:
-        print(error)
+    await update.reply_photo(
+        photo=img,
+        caption="<b>Made by @FayasNoushad</b>",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
+        progress=progress,
+        progress_args=("Trying to Uploading....", qr)
+    )
     try:
         os.remove(img)
     except Exception as error:
