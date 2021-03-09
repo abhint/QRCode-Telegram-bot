@@ -40,7 +40,7 @@ async def qr_encode(bot, update):
     qrcode.png(qrname + '.png', scale=6)
     img = qrname + '.png'
     try:
-        await bot.send_message(
+        await bot.send_photo(
             photo=img,
             caption="<b>Made by @FayasNoushad</b>",
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⚙ Join Updates Channel ⚙', url='https://telegram.me/FayasNoushad')]]),
@@ -49,7 +49,6 @@ async def qr_encode(bot, update):
         )
     except Exception as error:
         await qr.edit_text(f"{Message.ERROR}")
-        return
     try:
         os.remove(img)
     except Exception as error:
