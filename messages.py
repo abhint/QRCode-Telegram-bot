@@ -6,7 +6,7 @@
 
 class Message:
     START_TEXT = """
-Hello {}, I am a simple link to QR code generator with QR code decode to link bot. Don't generate reporting contents and don't spam. Spamming is strictly prohibited and leads to permanent ban.
+Hello {}, I am a simple link to QR code generator with QR code decode to link bot.
 
 Made by @FayasNoushad
 """
