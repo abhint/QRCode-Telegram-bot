@@ -19,5 +19,5 @@ Made by @FayasNoushad
 
 Made by @FayasNoushad
 """
-    ERROR = "Something Wrong! Click help button for more... Contact <a href='https://telegram.me/FayasChat'>support group</a>."
+    ERROR = "Something Wrong! Click help button for more... Contact @FayasChat."
     
