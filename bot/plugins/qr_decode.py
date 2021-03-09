@@ -37,7 +37,7 @@ async def qr_decode(bot, update):
     im_dowload = ''
     qr_text = ''
     try:
-        im_dowload = await bot.download(
+        im_dowload = await update.download(
             file_name=dl_location + '.png',
             progress=progress,
             progress_args=(
