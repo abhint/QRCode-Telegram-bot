@@ -8,14 +8,8 @@ class Message:
     START_TEXT = """
 Hello {}, I am a simple link to QR code generator with QR code decode to link bot.
 
-Made by @FayasNoushad
-"""
-
-    HELP_USER = """
-<b><u>Help and Informations</u></b>
-
-- Send me a link I will generate the QR code of that link.
-- Send me a QR code image I will decode that image and convert to link.
+- Send me a link I will generate the QR code of that link
+- Send me a QR code image I will decode that image and convert to link
 
 Made by @FayasNoushad
 """
