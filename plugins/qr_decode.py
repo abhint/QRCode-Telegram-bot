@@ -10,7 +10,7 @@ from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 from PIL import Image
 import os
 from pyzbar.pyzbar import decode
-from bot.plugins.display.display_progress import progress
+from plugins.display.display_progress import progress
 from env import EnvData 
 from messages import Message
 
