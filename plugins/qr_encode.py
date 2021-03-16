@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
 import pyqrcode
 from messages import Message
-from bot.plugins.display.display_progress import progress
+from plugins.display.display_progress import progress
 from env import EnvData
 from messages import Message
 
