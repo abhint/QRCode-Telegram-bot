@@ -14,7 +14,7 @@ bot = Client(
     api_id=EnvData.API_ID,
     api_hash=EnvData.API_HASH,
     plugins={
-        "root": "bot/plugins"
+        "root": "plugins"
         },
     parse_mode="html"
 )
