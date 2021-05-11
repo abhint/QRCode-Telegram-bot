@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 # This is bot coded by Abhijith-cloud and used for educational purposes only
-# https://github.com/Abhijith-cloud
+# https://github.com/AbhijithNT
 # (c) Abhijith N T ;-)
 # Thank you https://github.com/pyrogram/pyrogram :-)
-
 
 import os
 from pyrogram import Client, filters
