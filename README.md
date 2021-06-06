@@ -1,14 +1,17 @@
 # QRCode-Telegram-bot
 
-## installation
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AbhijithNT/QRCode-Telegram-bot/)
-
-Libraries used: => Pyrogram => Telegraph
+#### Clone repository
 
 ```sh
-git clone https://github.com/AbhijithNT/QRCode-Telegram-bot.git / gh repo clone AbhijithNT/QRCode-Telegram-bot/
+//With HTTPS
+$ git clone https://github.com/AbhijithNT/QRCode-Telegram-bot.git 
 ```
+```sh
+//With GitHub CLI
+$ gh repo clone AbhijithNT/QRCode-Telegram-bot
+```
+#### Install requirements
 ```sh
 pip3 install -r requirements.txt
 ```
@@ -31,6 +34,12 @@ click the link to get your app id & api_hash [my.telegram.org](https://my.telegr
 ```sh
 python3 main.py
 ```
+
+### Deploy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AbhijithNT/QRCode-Telegram-bot/)
+
+
 
 ## Credits, and Thanks to
 
