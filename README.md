@@ -32,7 +32,7 @@ click the link to get your app id & api_hash [my.telegram.org](https://my.telegr
 ### Run your Bot
 
 ```sh
-python3 main.py
+python3 -m bot
 ```
 
 ### Deploy
