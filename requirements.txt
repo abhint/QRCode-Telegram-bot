@@ -5,3 +5,4 @@ pyqrcode
 pypng
 pyzbar
 Pillow
+python-dotenv
