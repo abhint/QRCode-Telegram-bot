@@ -5,7 +5,7 @@
 
 ```sh
 //With HTTPS
-$ git clone https://github.com/AbhijithNT/QRCode-Telegram-bot.git 
+$ git clone https://github.com/AbhijithNT/QRCode-Telegram-bot.git
 ```
 ```sh
 //With GitHub CLI
@@ -17,13 +17,12 @@ pip3 install -r requirements.txt
 ```
 ### Add your bot details
 
-An example `env.py` file could be:
+An example `cofig.py` file could be:
 
 ```python3
-class EnvData:
-    BOT_TOKEN = '1991308069:tU1gaAyvgAAGgo3F2AI2J7nxcqvkwoTCrpY' #add your API_HASH from https://my.telegram.org/apps
-    API_ID = 1234567 #Add your API_ID from https://my.telegram.org/apps
-    API_HASH = 'bc4811980930ad49d7f8e2b024f7cf13' #Add your Bot token from @Botfather
+BOT_TOKEN = '1991308069:tU1gaAyvgAAGgo3F2AI2J7nxcqvkwoTCrpY' #add your API_HASH from https://my.telegram.org/apps
+API_ID = 1234567 #Add your API_ID from https://my.telegram.org/apps
+API_HASH = 'bc4811980930ad49d7f8e2b024f7cf13' #Add your Bot token from @Botfather
 ```
 Go and get the bot token [@BotFather](https://telegram.dog/BotFather)
 
