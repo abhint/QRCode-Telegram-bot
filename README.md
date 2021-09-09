@@ -45,4 +45,4 @@ python3 -m bot
 * [Dan Tès](https://telegram.dog/haskell) for his[Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
 ### LICENSE
-- GPLv3
+- [ GPL-3.0 License](https://github.com/AbhijithNT/OlamTelegramBot/blob/main/LICENSE)
