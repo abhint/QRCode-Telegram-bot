@@ -1,8 +1,7 @@
-#!/usr/bin/env python3
 # This is bot coded by AbhijithNT and used for educational purposes only
-# https://github.com/AbhijithNT
-# (c) Abhijith N T ;-)
-# Thank you https://github.com/pyrogram/pyrogram :-)
+# https://github.com/abhint
+# (c) Abhijith N T 
+# Thank you https://github.com/pyrogram/pyrogram 
 
 async def progress(current, total, up_msg, message):
     try:
